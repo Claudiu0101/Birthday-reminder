@@ -1,0 +1,20 @@
+<button nz-button nzType="primary" (click)="showModal()">Next Birthday</button>
+<nz-modal [(nzVisible)]="modalVisibility" (nzOnCancel)="handleClose()">
+  <div *nzModalContent>
+    <h1>Next birthday is {{ nextPerson.firstName }}</h1>
+    <h1>{{ nextPerson.birthDate }}</h1>
+    <p *ngFor="let wish of nextPerson.wishList">{{ wish }}</p>
+    <h1> Days left until the next birthday: {{daysUntilNextBirthday}}</h1>
+  </div>
+  <div *nzModalFooter>
+    <button nz-button nzType="primary" (click)="handleOk()">Back</button>
+  </div>
+</nz-modal>
+<nz-modal [(nzVisible)]="notExistModal" (nzOnCancel)="handleExistClose()">
+  <div *nzModalContent>
+    <h1>No birthdays left</h1>
+  </div>
+  <div *nzModalFooter>
+    <button nz-button nzType="primary" (click)="handleExistOk()">Back</button>
+  </div>
+</nz-modal>

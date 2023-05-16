@@ -1,0 +1,137 @@
+[
+  {
+    "id": 1,
+    "firstName": "Mircea",
+    "lastName": "Andrei",
+    "phoneNumber": "0756432456",
+    "city": "Brasov",
+    "birthDate": "2001-05-20",
+    "wishList": ["Wireless headphones", "Scented candles"]
+  },
+  {
+    "id": 2,
+    "firstName": "Fabian",
+    "lastName": "Filip",
+    "phoneNumber": "0789564768",
+    "city": "Constanta",
+    "birthDate": "1976-09-10",
+    "wishList": ["A telescope", "A leather notebook"]
+  },
+  {
+    "id": 3,
+    "firstName": "Magdalena",
+    "lastName": "Popescu",
+    "phoneNumber": "0721345675",
+    "city": "Buzau",
+    "birthDate": "1997-07-31",
+    "wishList": ["A gourmet cooking book", "A set of professional cooking knives"]
+  },
+  {
+    "id": 4,
+    "firstName": "Avram",
+    "lastName": "Gheorghe",
+    "phoneNumber": "0776456432",
+    "city": "Arad",
+    "birthDate": "2007-10-21",
+    "wishList": ["A drone", "A new backpack"]
+  },
+  {
+    "id": 5,
+    "firstName": "Popescu",
+    "lastName": "Filimon",
+    "phoneNumber": "0768456321",
+    "city": "Oradea",
+    "birthDate": "2003-03-19",
+    "wishList": ["A smart thermostat", "A set of eco-friendly cleaning products"]
+  },
+  {
+    "id": 6,
+    "firstName": "Marta",
+    "lastName": "Andreea",
+    "phoneNumber": "0756456321",
+    "city": "Cluj-Napoca",
+    "birthDate": "1956-12-13",
+    "wishList": ["A smart scale", "A set of resistance bands"]
+  },
+  {
+    "id": 7,
+    "firstName": "Iulia",
+    "lastName": "Bianca",
+    "phoneNumber": "0773459678",
+    "city": "Brasov",
+    "birthDate": "1978-02-06",
+    "wishList": ["A gift card to a local spa", "A set of bath towels"]
+  },
+  {
+    "id": 8,
+    "firstName": "Calcioiu",
+    "lastName": "Alexandru",
+    "phoneNumber": "0712564378",
+    "city": "Craiova",
+    "birthDate": "1986-09-21",
+    "wishList": ["A new TV", "A soundbar"]
+  },
+  {
+    "id": 9,
+    "firstName": "Filipescu",
+    "lastName": "Ion",
+    "phoneNumber": "0754278543",
+    "city": "Iasi",
+    "birthDate": "1966-03-08",
+    "wishList": ["A stand mixer", "A cookbook by Jamie Oliver"]
+  },
+  {
+    "id": 10,
+    "firstName": "Zorgan",
+    "lastName": "Marian",
+    "phoneNumber": "0739567432",
+    "city": "Botosani",
+    "birthDate": "2002-04-27",
+    "wishList": ["A fitness tracker", "A set of wireless earbuds"]
+  },
+  {
+    "id": 11,
+    "firstName": "Mirciulescu",
+    "lastName": "Ana",
+    "phoneNumber": "0789564786",
+    "city": "Timisoara",
+    "birthDate": "1976-08-21",
+    "wishList": ["A set of colored pencils", "A sketchbook"]
+  },
+  {
+    "id": 12,
+    "firstName": "Matache",
+    "lastName": "Andrei",
+    "phoneNumber": "0743264521",
+    "city": "Bucuresti",
+    "birthDate": "1980-11-16",
+    "wishList": ["A coffee table book about art", "A museum membership"]
+  },
+  {
+    "id": 13,
+    "firstName": "Baciu",
+    "lastName": "Gabriel",
+    "phoneNumber": "0795674237",
+    "city": "Fagaras",
+    "birthDate": "1995-09-22",
+    "wishList": ["A gift card to a local restaurant", "A wine decanter"]
+  },
+  {
+    "id": 14,
+    "firstName": "Macovei",
+    "lastName": "Pantrea",
+    "phoneNumber": "0745654234",
+    "city": "Galati",
+    "birthDate": "2006-04-18",
+    "wishList": ["A set of copper mugs", "A cocktail recipe book"]
+  },
+  {
+    "id": 15,
+    "firstName": "Iacob",
+    "lastName": "Mihai",
+    "phoneNumber": "0754887654",
+    "city": "Bacau",
+    "birthDate": "1954-11-13",
+    "wishList": ["A bread maker", "A bread recipe book"]
+  }
+]

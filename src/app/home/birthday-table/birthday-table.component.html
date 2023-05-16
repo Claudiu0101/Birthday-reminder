@@ -1,0 +1,73 @@
+<!--<div>
+  <button nz-button nzType="primary" routerLink="/signUp">SignUp</button>
+</div>-->
+<div class="functions-container">
+
+  <nz-input-group [nzSuffix]="suffixIconSearch" class="search-container">
+    <input type="text" nz-input placeholder="Search..." [(ngModel)]="itemForSearch" (input)="searchList()"/>
+  </nz-input-group>
+
+  <ng-template #suffixIconSearch>
+    <span nz-icon nzType="search"></span>
+  </ng-template>
+
+  <button nz-button nzType="primary" routerLink="/add">Add a person</button>
+
+  <app-reminder-info [listOfBirthdays]="displayPersonList"></app-reminder-info> 
+
+</div>
+<nz-table #basicTable [nzData]="displayPersonList">
+  <thead>
+    <tr>
+      <th *ngFor="let column of listOfColumns" [nzSortOrder]="column.sortOrder" [nzSortFn]="column.sortFn" [nzSortDirections]="column.sortDirections">{{ column.name }}</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let data of basicTable.data">
+      <ng-container *ngIf="!editCache[data.id].edit; else editTemplate">
+        <td>{{ data.firstName }}</td>
+        <td>{{ data.lastName }}</td>
+        <td>{{ data.phoneNumber }}</td>
+        <td>{{ data.city }}</td>
+        <td>{{ data.birthDate | date : "dd MMMM yyyy" }}</td>
+        <td class="actions">
+          <a (click)="editStarting(data.id)"><span nz-icon nzType="edit" nzTheme="outline"></span></a>
+          <a (click)="personDelete(data.id)"><span nz-icon nzType="delete" nzTheme="outline"></span></a>
+          <a (click)="modalOpen(data.id)"> <span nz-icon nzType="border-outer" nzTheme="outline"></span>
+          </a>
+        </td>
+      </ng-container>
+      <ng-template #editTemplate>
+        <td>
+          <input type="text" nz-input [(ngModel)]="editCache[data.id].data.firstName"/>
+        </td>
+        <td>
+          <input type="text" nz-input [(ngModel)]="editCache[data.id].data.lastName"/>
+        </td>
+        <td>
+          <input type="text" nz-input [(ngModel)]="editCache[data.id].data.phoneNumber"/>
+        </td>
+        <td>
+          <input type="text" nz-input [(ngModel)]="editCache[data.id].data.city"/>
+        </td>
+        <td>
+          <nz-date-picker [(ngModel)]="editCache[data.id].data.birthDate"></nz-date-picker>
+        </td>
+        <td>
+          <a (click)="editSaving(data.id)" class="save">Save</a>
+          <a nz-popconfirm nzPopconfirmTitle="Are you sure to cancel?" (nzOnConfirm)="editCanceling(data.id)">Cancel</a>
+        </td>
+      </ng-template>
+    </tr>
+  </tbody>
+</nz-table>
+
+<nz-modal [(nzVisible)]="visibilityForModal" (nzOnCancel)="close()">
+  <div *nzModalContent>
+    <h1>Wish list for {{ showedPerson.firstName }}</h1>
+    <p *ngFor="let wish of showedPerson.wishList">{{ wish }}</p>
+  </div>
+  <div *nzModalFooter>
+    <button nz-button nzType="primary" (click)="ok()">Back</button>
+  </div>
+</nz-modal>

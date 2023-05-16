@@ -1,0 +1,60 @@
+<form nz-form [formGroup]="personForm" (ngSubmit)="submitForm()">
+  <nz-form-item>
+    <nz-form-label [nzSm]="6" [nzXs]="24" nzRequired nzFor="firstName">First name</nz-form-label>
+    <nz-form-control [nzSm]="14" [nzXs]="24" nzErrorTip="Please input your first name!">
+      <input nz-input formControlName="firstName" id="firstName" />
+    </nz-form-control>
+  </nz-form-item>
+
+  <nz-form-item>
+    <nz-form-label [nzSm]="6" [nzXs]="24" nzRequired nzFor="lastName">Last name</nz-form-label>
+    <nz-form-control [nzSm]="14" [nzXs]="24" nzErrorTip="Please input your last name!">
+      <input nz-input formControlName="lastName" id="lastName" />
+    </nz-form-control>
+  </nz-form-item>
+
+  <nz-form-item>
+    <nz-form-label [nzSm]="6" [nzXs]="24" nzRequired nzFor="phoneNumber">Phone Number</nz-form-label>
+    <nz-form-control [nzSm]="14" [nzXs]="24" [nzValidateStatus]="personForm.controls['phoneNumber']" nzErrorTip="Please input your phone number!">
+      <input nz-input formControlName="phoneNumber" id="phoneNumber" />
+    </nz-form-control>
+  </nz-form-item>
+
+  <nz-form-item>
+    <nz-form-label [nzSm]="6" [nzXs]="24" nzRequired nzFor="city">City</nz-form-label>
+    <nz-form-control [nzSm]="14" [nzXs]="24" nzErrorTip="Please input your city!">
+      <input nz-input formControlName="city" id="city" />
+    </nz-form-control>
+  </nz-form-item>
+
+  <nz-form-item>
+    <nz-form-label [nzSm]="6" [nzXs]="24" nzRequired>Date</nz-form-label>
+    <nz-form-control [nzSm]="14" [nzXs]="24" nzErrorTip="Please select your birth date!">
+      <nz-date-picker formControlName="birthDate" class="date-picker"></nz-date-picker>
+    </nz-form-control>
+  </nz-form-item>
+
+  <nz-form-item>
+    <nz-form-label [nzSm]="6" [nzXs]="24" nzRequired>Wish list</nz-form-label>
+    <nz-form-control [nzSm]="14" [nzXs]="24">
+      <button nz-button nzType="primary" (click)="addWish()">Add a wish</button>
+    </nz-form-control>
+  </nz-form-item>
+
+  <nz-form-item
+    *ngFor="let quantity of wishes().controls; let i = index" formArrayName="wishList">
+    <nz-form-label [nzSm]="6" [nzXs]="24" nzRequired>Wish</nz-form-label>
+    <nz-form-control [nzSm]="14" [nzXs]="24" formGroupName="{{ i }}" nzErrorTip="Please input a wish!">
+      <input nz-input formControlName="wish" class="wish" />
+      <button nz-button nzType="primary" (click)="removeWish(i)" nzDanger nzShape="round">
+        <span nz-icon nzType="close-circle" nzTheme="outline"></span>
+      </button>
+    </nz-form-control>
+  </nz-form-item>
+
+  <nz-form-item nz-row class="register-area">
+    <nz-form-control [nzSpan]="14" [nzOffset]="6">
+      <button nz-button nzType="primary">Register</button>
+    </nz-form-control>
+  </nz-form-item>
+</form>

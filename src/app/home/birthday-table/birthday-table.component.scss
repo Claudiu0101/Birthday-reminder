@@ -1,0 +1,26 @@
+nz-button-group [nz-button] {
+  margin-right: 0;
+}
+.functions-container {
+  display: flex;
+  justify-content: space-between;
+  button {
+    width: 150px;
+    margin: 12px;
+  }
+  .search-container {
+    width: 165px;
+    height: 33px;
+    margin: 11px;
+    input {
+      width: 165px;
+    }
+  }
+}
+.save {
+  margin-right: 10px;
+}
+.actions {
+  display: flex;
+  justify-content: space-around;
+}
